@@ -3,6 +3,8 @@ mod collect;
 use argparse::{ArgumentParser, Collect, StoreOption};
 use std::{collections::HashSet, iter::FromIterator};
 
+static PARTS_ROOT_DEFAULT: &str = "./parts";
+
 #[derive(Debug)]
 struct Arguments {
     parts_root: Option<String>,
@@ -46,6 +48,10 @@ fn collect_args() -> Arguments {
 
 fn main() {
     let args = collect_args();
-
-    println!("{:?}", args)
+    let raw = collect::collect_raw_parts(
+        &args
+            .parts_root
+            .as_ref()
+            .unwrap_or(&PARTS_ROOT_DEFAULT.to_string()),
+    );
 }
