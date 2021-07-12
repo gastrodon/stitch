@@ -3,3 +3,6 @@ name = "stitch"
 authors = ["Eva Harris <mail@gastrodon.io>"]
 version = "0.1.0"
 edition = "2018"
+
+[dependencies.argparse]
+version = "~0.2"
