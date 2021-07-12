@@ -1,7 +1,7 @@
 mod api;
 mod experience;
-mod part;
+mod project;
 
 pub use api::collect_raw_parts;
 pub use experience::Experience;
-pub use part::{Part, PartKind, PartStatus};
+pub use project::{Project, ProjectKind, ProjectStatus};

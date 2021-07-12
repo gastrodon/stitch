@@ -1,26 +1,26 @@
-pub enum PartKind {
+pub enum ProjectKind {
     Short,
     Full,
 }
 
-pub enum PartStatus {
+pub enum ProjectStatus {
     Default,
     Wip,
     Mvp,
     Archived,
 }
 
-pub struct Part {
-    kind: PartKind,
+pub struct Project {
+    kind: ProjectKind,
     language: String,
-    status: PartStatus,
+    status: ProjectStatus,
     repo: String,
     tags: Vec<String>,
     markdown_text: String,
 }
 
-impl Part {
-    fn parse(kind: PartKind, source: &str) -> Self {
+impl Project {
+    fn parse(kind: ProjectKind, source: &str) -> Self {
         unimplemented!()
     }
 }
